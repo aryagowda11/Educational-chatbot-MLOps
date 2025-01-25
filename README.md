@@ -1,5 +1,3 @@
-# GRAID
-
 # AI-Powered Educational Chatbot  
 
 An AI-driven chatbot designed to enhance digital learning experiences by enabling real-time interaction with lecture videos. This system leverages cutting-edge speech-to-text and language models to provide students with instant, contextual responses, helping them navigate and understand lecture materials more effectively.  
