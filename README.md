@@ -74,11 +74,12 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
    - Facilitates secure and scalable communication between the UI, AI services, and backend databases.
 
 ---
+
 ## Let's Talk Data
 We begin by ingesting raw lecture videos and converting their audio into text using state-of-the-art speech-to-text technology. The resulting transcripts are segmented and indexed in our secure cloud repository, enabling fast semantic search and context-aware retrieval. Continuous quality checks and feedback loops ensure that the processed data remains accurate and up-to-date for optimal chatbot performance.
 
 
-
+---
 
 
 ## MLOps Implementation
