@@ -10,7 +10,7 @@ This project develops an AI-driven chatbot designed to transform video lectures 
 2. [System Architecture](#system-architecture)
    - [Core Components](#core-components)
    - [Data & Integration Layers](#data--integration-layers)
-3. [Let's Talk Data](#let's-talk-data)
+3. [Data](#data)
 4. [MLOps Implementation](#mlops-implementation)
    - [Development Pipeline](#development-pipeline)
    - [Deployment Strategy](#deployment-strategy)
@@ -75,7 +75,7 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
 
 ---
 
-## Let's Talk Data
+## Data
 We begin by ingesting raw lecture videos and converting their audio into text using state-of-the-art speech-to-text technology. The resulting transcripts are segmented and indexed in our secure cloud repository, enabling fast semantic search and context-aware retrieval. Continuous quality checks and feedback loops ensure that the processed data remains accurate and up-to-date for optimal chatbot performance.
 
 
