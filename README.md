@@ -49,7 +49,7 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
 
 2. **Speech-to-Text Engine**  
    - Transcribes lecture audio into text in real time.
-   - Built using cloud-based services (e.g., Google Cloud Speech-to-Text or Groq Whisper) to ensure high accuracy and low latency.
+   - Built using cloud-based services (and Groq Whisper) to ensure high accuracy and low latency.
 
 3. **Natural Language Processing (NLP) Module**  
    - Processes transcribed text and user queries.
@@ -89,13 +89,10 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
 - **Containerization & Orchestration:**  
   All services are containerized using Docker. Kubernetes handles orchestration, ensuring scalability, load balancing, and fault tolerance.
 
-- **Infrastructure as Code (IaC):**  
-  Tools such as Terraform or CloudFormation are employed to manage cloud resources, ensuring consistent and reproducible environments.
-
 ### Monitoring & Maintenance
 
 - **Performance Monitoring:**  
-  Tools like Prometheus, Grafana, and LangFuse monitor key metrics (response time, error rates, resource usage). This continuous tracking ensures that any issues are promptly identified and resolved.
+  LangFuse monitors key metrics (response time, error rates, resource usage). This continuous tracking ensures that any issues are promptly identified and resolved.
 
 - **Feedback and Retraining Pipelines:**  
   User feedback is automatically logged and triggers retraining cycles if performance dips below defined thresholds—drawing on strategies proven effective in other MLOps projects.
@@ -108,7 +105,7 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
   Lecture videos, transcripts, and user interaction logs are stored in secure cloud buckets (e.g., on GCP), ensuring high availability and redundancy.
 
 - **Model Registry:**  
-  Models, along with their versions and performance metrics, are tracked using tools like MLflow. This registry facilitates seamless rollbacks and model updates based on new data and feedback.
+  Models, along with their versions and performance metrics, are tracked using Langfuse. This registry facilitates seamless rollbacks and model updates based on new data and feedback.
 
 ---
 
