@@ -79,6 +79,26 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
 We begin by ingesting raw lecture videos and converting their audio into text using state-of-the-art speech-to-text technology. The resulting transcripts are segmented and indexed in our secure cloud repository, enabling fast semantic search and context-aware retrieval. Continuous quality checks and feedback loops ensure that the processed data remains accurate and up-to-date for optimal chatbot performance.
 
 
+### Input Details
+
+#### Unstructured Input
+- **Uploaded Lecture Videos**
+  - **Size**: Adaptable to a variety of video sizes to suit different lecture lengths and resolutions.
+  - **Format**:
+    - **MP4**: Standard format for most digital videos, offering broad compatibility.
+    - **AVI**: An older format that is still widely used for its robustness.
+    - **FLV**: Commonly used for streaming video content on the internet.
+    - **MKV**: Supports multiple audio and subtitle tracks in one file, suitable for complex lecture recordings.
+
+#### Structured Input
+- **CSV Files**
+  - These files contain key data points that assist in querying the Language Learning Model (LLM) to retrieve relevant information efficiently.
+
+### Output
+- **Chatbot Responses**: Generates responses based on user queries. These responses are informed by:
+  - **Lecture Video Content**: Analyzed through advanced speech-to-text and natural language processing technologies.
+  - **Data from CSV Files**: Incorporates structured data to provide accurate and contextually relevant information.
+
 ---
 
 
