@@ -1,5 +1,5 @@
 # AI-Powered Chatbot for Enhancing Digital Learning
-
+![picture alt](assets/logo.png)
 This project develops an AI-driven chatbot designed to transform video lectures into interactive learning experiences. By integrating cutting-edge speech-to-text and language processing technologies with robust MLOps practices, the chatbot provides real-time, context-aware support for students and professors. The system leverages best practices from other MLOps projects—such as modular code structure, containerized deployments, and continuous monitoring—to ensure scalability, reliability, and continuous improvement.
 
 ---
