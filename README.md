@@ -10,15 +10,16 @@ This project develops an AI-driven chatbot designed to transform video lectures 
 2. [System Architecture](#system-architecture)
    - [Core Components](#core-components)
    - [Data & Integration Layers](#data--integration-layers)
-3. [MLOps Implementation](#mlops-implementation)
+3. [Let's Talk Data](#let's-talk-data)
+4. [MLOps Implementation](#mlops-implementation)
    - [Development Pipeline](#development-pipeline)
    - [Deployment Strategy](#deployment-strategy)
    - [Monitoring & Maintenance](#monitoring--maintenance)
-4. [Data Storage and Model Registry](#data-storage-and-model-registry)
-5. [Airflow Pipelines](#airflow-pipelines)
-6. [Benefits](#benefits)
-7. [Conclusion](#conclusion)
-8. [Contributors](#contributors)
+5. [Data Storage and Model Registry](#data-storage-and-model-registry)
+6. [Airflow Pipelines](#airflow-pipelines)
+7. [Benefits](#benefits)
+8. [Conclusion](#conclusion)
+9. [Contributors](#contributors)
 
 ---
 
@@ -73,6 +74,12 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
    - Facilitates secure and scalable communication between the UI, AI services, and backend databases.
 
 ---
+## Let's Talk Data
+We begin by ingesting raw lecture videos and converting their audio into text using state-of-the-art speech-to-text technology. The resulting transcripts are segmented and indexed in our secure cloud repository, enabling fast semantic search and context-aware retrieval. Continuous quality checks and feedback loops ensure that the processed data remains accurate and up-to-date for optimal chatbot performance.
+
+
+
+
 
 ## MLOps Implementation
 
