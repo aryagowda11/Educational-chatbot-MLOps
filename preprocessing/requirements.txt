@@ -1,0 +1,14 @@
+functions-framework==3.*
+google-cloud-storage==2.*
+google-cloud-logging==2.*
+groq==0.18.0
+llama-index==0.12.16
+llama-index-llms-groq==0.3.1
+llama-index-vector-stores-pinecone==0.4.4
+llama_index-embeddings-huggingface
+pandas==2.2.3
+pathlib
+python-dotenv
+pydub==0.25.1
+pinecone-client>=3.0.0
+openai
