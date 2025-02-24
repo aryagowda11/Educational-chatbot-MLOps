@@ -105,6 +105,9 @@ We begin by ingesting raw lecture videos and converting their audio into text us
 ![picture alt](assets/ProjectWorkflow.png)
 
 ---
+
+## Prerequisites
+
 - [Git](https://www.git-scm.com/downloads)
 - [Docker](https://www.docker.com/get-started/)
 - [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/start.html)
@@ -185,9 +188,16 @@ By integrating advanced AI capabilities with proven MLOps methodologies—drawin
 
 ## Contributors
 
-- **Anish Hegde**
-- **Arya Gowda**
-- **Bhavya Pandey**
-- **Nikhileshwar Bommareddy**
+[Anish Hegde](https://github.com/ahegde3)  <br>
+[Arya Gowda](https://github.com/aryagowda11) <br>
+[Bhavya Pandey](https://github.com/bhavypandey) <br>
+[Nikhileshwar Bommareddy](https://github.com/Nikhileshwarreddybommareddy) <br> 
+
+---
+
+## Acknowledgments
+
+Special thanks to our Professor, [Ramin Mohammadi](https://github.com/raminmohammadi), for his guidance and support throughout this project.
+
 
 Feel free to explore the repository, provide feedback, and contribute to further enhancing the digital learning experience through this AI chatbot.
