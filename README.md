@@ -100,8 +100,19 @@ We begin by ingesting raw lecture videos and converting their audio into text us
   - **Data from CSV Files**: Incorporates structured data to provide accurate and contextually relevant information.
 
 ---
+## Project Workflow
 
+![picture alt](assets/ProjectWorkflow.png)
 
+---
+- [Git](https://www.git-scm.com/downloads)
+- [Docker](https://www.docker.com/get-started/)
+- [Airflow](https://airflow.apache.org/docs/apache-airflow/stable/start.html)
+- [DVC](https://airflow.apache.org/docs/apache-airflow/stable/start.html) (Data Version Control)
+- [Python](https://www.python.org/downloads/) 3.x
+- Pip (Python package installer)
+- Google Cloud Platform (GCP) Account
+---
 ## MLOps Implementation
 
 ### Development Pipeline
