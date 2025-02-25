@@ -115,6 +115,8 @@ We begin by ingesting raw lecture videos and converting their audio into text us
 - [Python](https://www.python.org/downloads/) 3.x
 - Pip (Python package installer)
 - Google Cloud Platform (GCP) Account
+- NodeJs
+- npm
 ---
 ## MLOps Implementation
 
