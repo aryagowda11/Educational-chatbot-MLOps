@@ -102,7 +102,7 @@ We begin by ingesting raw lecture videos and converting their audio into text us
 ---
 ## Project Workflow
 
-![picture alt](assets/ProjectWorkflow.jpeg)
+![picture alt](assets/projectworkflow.jpg)
 
 ---
 
