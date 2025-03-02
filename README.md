@@ -130,8 +130,8 @@ We begin by ingesting raw lecture videos and converting their audio into text us
 ### Deployment Strategy
 
 - **Containerization & Orchestration:**  
-  All services are containerized using Docker. Kubernetes handles orchestration, ensuring scalability, load balancing, and fault tolerance.
-
+  All services are containerized using Docker.
+  
 ### Monitoring & Maintenance
 
 - **Performance Monitoring:**  
