@@ -28,7 +28,7 @@ This project fuses advanced AI capabilities with a robust MLOps lifecycle to cre
 
 - **Advanced AI Capabilities:**
   - **Speech-to-Text Processing:** Real-time transcription of lecture audio.
-  - **Language Understanding:** Leverages state-of-the-art language models (e.g., GPT, Groq) to interpret and respond to queries.
+  - **Language Understanding:** Leverages state-of-the-art language models (e.g., GPT, Gemini, llama, etc) to interpret and respond to queries.
   - **Real-Time Interaction:** Delivers contextually relevant answers, enhancing the educational experience.
 
 - **MLOps-Driven Lifecycle:**
