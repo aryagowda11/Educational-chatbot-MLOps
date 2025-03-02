@@ -16,10 +16,9 @@ This project develops an AI-driven chatbot designed to transform video lectures 
    - [Deployment Strategy](#deployment-strategy)
    - [Monitoring & Maintenance](#monitoring--maintenance)
 5. [Data Storage and Model Registry](#data-storage-and-model-registry)
-6. [Airflow Pipelines](#airflow-pipelines)
-7. [Benefits](#benefits)
-8. [Conclusion](#conclusion)
-9. [Contributors](#contributors)
+6. [Benefits](#benefits)
+7. [Conclusion](#conclusion)
+8. [Contributors](#contributors)
 
 ---
 
@@ -150,19 +149,6 @@ We begin by ingesting raw lecture videos and converting their audio into text us
 
 - **Model Registry:**  
   Models, along with their versions and performance metrics, are tracked using Langfuse. This registry facilitates seamless rollbacks and model updates based on new data and feedback.
-
----
-
-## Airflow Pipelines
-
-- **Automated Workflows:**  
-  Apache Airflow orchestrates the end-to-end data processing pipeline—from video ingestion and transcription to model retraining based on user feedback.
-  
-- **Pipeline Steps Include:**  
-  - Data source verification and download.  
-  - Transcription and indexing of lecture content.  
-  - Integration of real-time queries and response generation.  
-  - Automated email notifications for pipeline status updates.
 
 ---
 
