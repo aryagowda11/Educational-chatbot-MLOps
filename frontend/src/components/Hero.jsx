@@ -39,7 +39,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="hero-text"
         >
-          FUTURE OF LEARNING IS HERE
+          FUTURE OF LEARNING
           <span className="blue-dot">.</span>
         </motion.h1>
       </div>
