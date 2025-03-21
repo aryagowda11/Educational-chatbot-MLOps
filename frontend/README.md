@@ -34,3 +34,8 @@ pnpm dev
 # or
 bun dev
 ```
+
+
+# Deployed Link
+
+https://graid-448319.web.app
