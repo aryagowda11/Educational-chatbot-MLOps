@@ -1,0 +1,37 @@
+.container {
+  padding: 2rem;
+  margin: 0 auto;
+  height: calc(100vh - 70px);
+  width: 55%;
+  margin-top: 70px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 11px;
+}
+
+.addButton {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
+.addButton:hover {
+  background-color: #3a7bc8;
+}
+
+.lectureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}

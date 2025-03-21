@@ -1,0 +1,23 @@
+.courseCard {
+  background-color: #2d5c9e;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.courseCard:hover {
+  transform: translateY(-2px);
+  background-color: #3670bd;
+}
+
+.videoCount {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.courseName {
+  font-weight: bold;
+  color: white;
+} 

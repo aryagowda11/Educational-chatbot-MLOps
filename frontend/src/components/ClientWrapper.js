@@ -1,25 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
-import LoginSidebar from "@/components/LoginSidebar";
+import React from "react";
+import Navbar from "@/app/_components/HomeNavbar/Navbar";
+import AuthSidebar from "@/app/_components/AuthSidebar/AuthSidebar";
+import { useSidebar } from "@/app/_hooks/useSidebar";
 
 export default function ClientWrapper({ children }) {
-  const [sidebarType, setSidebarType] = useState(null); // 'login' or 'signup'
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const handleAuthClick = (type) => {
-    setSidebarType(type);
-    setIsSidebarOpen(true);
-  };
+  const {
+    sidebarType,
+    setSidebarType,
+    isSidebarOpen,
+    handleAuthClick,
+    handleClose,
+  } = useSidebar();
 
   return (
     <>
       <Navbar onAuthButtonClick={handleAuthClick} />
       {children}
-      <LoginSidebar
+      <AuthSidebar
         isOpen={isSidebarOpen}
-        onClose={() => setIsSidebarOpen(false)}
+        onClose={handleClose}
         authType={sidebarType}
         setAuthType={setSidebarType}
       />
