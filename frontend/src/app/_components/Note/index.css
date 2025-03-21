@@ -1,0 +1,38 @@
+.note-container {
+  padding: 1rem;
+  /* max-width: 800px;
+    margin: 2rem auto; */
+}
+
+.note-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.note-title {
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.note-textarea {
+  width: 100%;
+  min-height: 200px;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.note-title:focus,
+.note-textarea:focus {
+  background-color: #f8f9fa;
+}

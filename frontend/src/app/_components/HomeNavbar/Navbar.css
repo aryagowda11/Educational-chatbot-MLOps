@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@300;400;500;600;700&display=swap");
+
 .navbar {
   position: fixed;
   top: 0;
@@ -38,6 +40,8 @@
   align-items: center;
   gap: 2rem;
   margin-left: 10%;
+  font-family: "Noto Sans Thai Looped", sans-serif;
+  font-size: 16px;
 }
 
 .nav-link {
@@ -56,6 +60,8 @@
   position: fixed;
   right: 0;
   margin: 5%;
+  font-family: "Noto Sans Thai Looped", sans-serif;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {

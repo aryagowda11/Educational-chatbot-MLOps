@@ -1,0 +1,86 @@
+.sidebar {
+  width: 280px;
+  background-color: #1a1a1a;
+  border-right: 1px solid #333;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.backButton {
+  padding: 16px;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.backButton:hover {
+  color: #4a90e2;
+}
+
+.courseNav {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.professorSection {
+  margin-bottom: 24px;
+}
+
+.professorName {
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.courseSection {
+  margin-bottom: 16px;
+  padding-left: 8px;
+}
+
+.courseName {
+  color: #ccc;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.lecture {
+  color: #888;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 0.9rem;
+}
+
+.lecture:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.activeLecture {
+  background-color: #2d5c9e;
+  color: white;
+}
+
+.activeLecture:hover {
+  background-color: #3670bd;
+}
+
+.settings {
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #666;
+  cursor: pointer;
+}

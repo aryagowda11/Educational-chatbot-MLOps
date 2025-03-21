@@ -1,0 +1,65 @@
+/* Right Sidebar - Chat */
+.chatSidebar {
+  width: 300px;
+  background-color: #1a1a1a;
+  border-left: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chatHeader {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.chatControls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.chatMessages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto; /* Only chat messages can scroll */
+}
+
+.messageContainer {
+  margin-bottom: 20px;
+}
+
+.messageUser {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.messageContent {
+  color: white;
+  line-height: 1.5;
+}
+
+.chatInput {
+  padding: 1rem;
+  border-top: 1px solid #333;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chatInput input {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #333;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+.chatInput button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: none;
+  color: #4a90e2;
+  font-size: 20px;
+  cursor: pointer;
+}

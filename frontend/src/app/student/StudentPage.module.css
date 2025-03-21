@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+  background-image: url("/assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+  position: relative;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-right: 1px solid #333;
+  height: 100%;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+/* Keep other existing styles for courseGrid, etc. */

@@ -1,20 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import "../styles/LoginSidebar.css";
+import { useRef, useEffect } from "react";
+import { useAuth } from "@/app/_hooks/useAuth";
+import "./AuthSidebar.css";
 
-export default function LoginSidebar({
+export default function AuthSidebar({
   isOpen,
   onClose,
   authType,
   setAuthType,
 }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const sidebarRef = useRef(null);
+  const {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    username,
+    setUsername,
+    role,
+    setRole,
+    isLoading,
+    error,
+    handleAuth,
+    resetAuth,
+  } = useAuth();
 
+  const sidebarRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -23,6 +35,7 @@ export default function LoginSidebar({
         isOpen
       ) {
         onClose();
+        resetAuth();
       }
     };
 
@@ -30,7 +43,7 @@ export default function LoginSidebar({
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, resetAuth]);
 
   const isLogin = authType === "login";
   const title = isLogin ? "Login" : "Sign Up";
@@ -41,8 +54,14 @@ export default function LoginSidebar({
 
   const handleToggle = () => {
     setAuthType(authType === "login" ? "signup" : "login");
-    // onClose();
-    // You can add navigation or state change here
+    resetAuth();
+  };
+
+  const handleSubmit = async () => {
+    const success = await handleAuth(authType);
+    if (success) {
+      onClose();
+    }
   };
 
   return (
@@ -57,12 +76,38 @@ export default function LoginSidebar({
         <h2 className="login-title">{title}</h2>
 
         <div className="form-group">
+          {error && <div className="error-message">{error}</div>}
+
+          {authType === "signup" && (
+            <>
+              <input
+                type="text"
+                placeholder="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="input-field"
+                disabled={isLoading}
+              />
+
+              <select
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                className="input-field"
+                disabled={isLoading}
+              >
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+              </select>
+            </>
+          )}
+
           <input
             type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="input-field"
+            disabled={isLoading}
           />
 
           <input
@@ -71,30 +116,31 @@ export default function LoginSidebar({
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="input-field"
+            disabled={isLoading}
           />
 
           <button
             className="login-button"
-            onClick={() => {
-              // Handle login/signup logic here
-              onClose();
-            }}
+            onClick={handleSubmit}
+            disabled={isLoading}
           >
-            <span>{buttonText}</span>
-            <svg
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+            <span>{isLoading ? "Loading..." : buttonText}</span>
+            {!isLoading && (
+              <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            )}
           </button>
         </div>
 
