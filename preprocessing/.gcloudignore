@@ -1,0 +1,17 @@
+.git
+.gitignore
+.env
+__pycache__/
+*.pyc
+test/
+tests/
+*.mp4
+*.avi
+*.mov
+venv/
+env/
+.venv/
+.pytest_cache/
+node_modules/
+storage/
+*.wav 

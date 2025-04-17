@@ -1,11 +1,16 @@
 {
   "hosting": {
     "public": "out",
+<<<<<<< HEAD
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
+=======
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+>>>>>>> 911c895 (Initial Mask commit)
     "rewrites": [
       {
         "source": "**",

@@ -1,0 +1,43 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Environment and IDE files
+.env
+.venv
+env/
+venv/
+ENV/
+.idea/
+.vscode/
+
+# Test files and directories
+tests/
+test_*.py
+*_test.py
+
+# Docker files (to avoid recursion)
+Dockerfile*
+docker-compose*
+
+# Logs
+logs/
+*.log
+
+# Documentation
+README.md
+docs/
+
+# Temporary files
+tmp/
+temp/

@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import styles from "./CoursePage.module.css";
@@ -68,6 +69,14 @@ function CourseContent() {
     </>
   );
 }
+=======
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import styles from "./index.module.css";
+import Navbar from "@/app/_components/Navbar/index";
+import StudentCourseContainer from "@/app/_components/StudentCourseContainer";
+import ProtectedRoute from "@/app/_components/ProtectedRoute";
+>>>>>>> 911c895 (Initial Mask commit)
 
 // Main page component with Suspense
 export default function CoursePage() {
@@ -75,7 +84,13 @@ export default function CoursePage() {
     <div className={styles.container}>
       <Navbar />
       <Suspense fallback={<div>Loading course content...</div>}>
+<<<<<<< HEAD
         <CourseContent />
+=======
+        <ProtectedRoute>
+          <StudentCourseContainer />
+        </ProtectedRoute>
+>>>>>>> 911c895 (Initial Mask commit)
       </Suspense>
     </div>
   );

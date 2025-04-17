@@ -1,0 +1,18 @@
+pinecone_venv/
+datascience/storage/Logistic Regression/video_001/video_001.mp4
+datascience/storage/Logistic Regression/video_001/chunks/chunks
+node_modules
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+.env
+.DS_Store
+venv/
+cors.json
+*.log
+credentials.json
+token.json
+gmail_oauth.py

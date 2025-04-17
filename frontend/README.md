@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 This Graid web application is built with Next.js.
+=======
+# GRAID
+This Graid web application is built with Next.js, Javascript
+>>>>>>> 911c895 (Initial Mask commit)
 
 Requirements:
 
@@ -34,8 +39,11 @@ pnpm dev
 # or
 bun dev
 ```
+<<<<<<< HEAD
 
 
 # Deployed Link
 
 https://graid-448319.web.app
+=======
+>>>>>>> 911c895 (Initial Mask commit)

@@ -1,0 +1,7 @@
+# GRAID QA Prompt Template
+# 
+# This prompt is used for question-answering interactions with retrieved content.
+# It guides the LLM to synthesize answers from retrieved passages
+# while maintaining accuracy and relevance to the video content.
+#
+# Implementation details masked for security and intellectual property protection.

@@ -1,0 +1,8 @@
+# GRAID Query Rewriter Prompt Template
+# 
+# This prompt is used for rewriting and optimizing user queries.
+# It guides the LLM to transform queries into more effective forms
+# for improved vector retrieval and relevance.
+#
+# Implementation details masked for security and intellectual property protection.
+

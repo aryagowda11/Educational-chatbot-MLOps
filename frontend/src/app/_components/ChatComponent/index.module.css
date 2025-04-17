@@ -1,5 +1,6 @@
 /* Right Sidebar - Chat */
 .chatSidebar {
+<<<<<<< HEAD
   width: 300px;
   background-color: #1a1a1a;
   border-left: 1px solid #333;
@@ -11,32 +12,85 @@
 .chatHeader {
   padding: 1rem;
   border-bottom: 1px solid #333;
+=======
+  width: 20%;
+  background-color: black;
+  border: 2px solid #333;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+  font-size: 10px;
+}
+
+.emptyChatSidebar {
+  width: 100%;
+  background-color: black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+  font-size: 10px;
+  overflow: hidden;
+}
+.chatHeader {
+  padding: 1rem;
+>>>>>>> 911c895 (Initial Mask commit)
 }
 
 .chatControls {
   display: flex;
+<<<<<<< HEAD
   justify-content: flex-end;
   gap: 15px;
 }
 
 .chatMessages {
+=======
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.chatControlsIcons {
+  display: flex;
+  gap: 14px;
+  padding: 2px;
+}
+
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+>>>>>>> 911c895 (Initial Mask commit)
   flex: 1;
   padding: 1rem;
   overflow-y: auto; /* Only chat messages can scroll */
 }
 
 .messageContainer {
+<<<<<<< HEAD
   margin-bottom: 20px;
 }
 
 .messageUser {
   color: #666;
   margin-bottom: 5px;
+=======
+  margin-bottom: 15px;
+}
+
+.messageUser {
+  color: #3b82f6;
+  margin-bottom: 5px;
+  font-size: 0.6rem;
+>>>>>>> 911c895 (Initial Mask commit)
 }
 
 .messageContent {
   color: white;
   line-height: 1.5;
+<<<<<<< HEAD
 }
 
 .chatInput {
@@ -47,12 +101,51 @@
 }
 
 .chatInput input {
+=======
+  font-size: 0.6rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chatInput {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top: 1px solid #333;
+  display: flex;
+  align-items: center;
+}
+
+/* .chatInput input {
+>>>>>>> 911c895 (Initial Mask commit)
   flex: 1;
   padding: 0.5rem;
   background-color: #333;
   border: none;
   border-radius: 20px;
   color: white;
+<<<<<<< HEAD
+=======
+} */
+
+.chatInput textarea {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  resize: none;
+  /* overflow-y: scroll; */
+  line-height: 1.2rem;
+  height: 37px;
+  max-height: 7rem; 
+  box-sizing: border-box;
+  font-family: var(--font-nunito), sans-serif;
+}
+
+.chatInput textarea:focus {
+  outline: none;
+  border: none;
+>>>>>>> 911c895 (Initial Mask commit)
 }
 
 .chatInput button {
@@ -63,3 +156,147 @@
   font-size: 20px;
   cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+.typingIndicator {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: white ; 
+  font-family: var(--font-nunito), sans-serif;
+}
+
+.text1 {
+  animation: fadeColor 1.5s infinite ease-in-out;
+  animation-delay: 0s;
+}
+
+.text2 {
+  animation: fadeColor 1.5s infinite ease-in-out;
+  animation-delay: 0.15s;
+}
+
+.text3 {
+  animation: fadeColor 1.5s infinite ease-in-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeColor {
+  0% {
+    color: #3b82f6;
+    opacity: 100%;
+  }
+  50% {
+    color: white ; 
+    opacity: 50%;
+  }
+  100% {
+    color: #3b82f6;
+    opacity: 100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pause {
+  0%, 100% { animation-play-state: paused; }
+}
+
+.logoContainer svg {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+}
+
+.spin {
+  animation: spin 1.5s linear infinite, pause 1s step-end infinite;
+}
+
+/* .dotmenuBtn{
+  background-color: transparent;
+  border: 0px;
+} */
+
+.dotmenuContainer {
+  position: absolute;
+  top: 50px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2px;
+  width: 200px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dotmenuContainer button{
+  background-color: transparent;
+  border: 0px;
+}
+
+.dotmenuContainer p {
+  margin: 0;
+  font-size: 14px;
+  color: #CCCCCC;;
+  padding: 5px;
+  font-family: var(--font-nunito), sans-serif;
+}
+
+.dotmenuContainer div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dotmenuContainer div span {
+  font-family: var(--font-nunito), sans-serif;
+  color: white; 
+  cursor: pointer;
+  padding: 5px;
+  align-content: center;
+}
+
+.dotmenuContainer p:last-child {
+  font-weight: 500;
+}
+
+.small{
+  font-size: 0.6rem;
+}
+
+.medium{
+  font-size: 0.8rem;
+}
+
+.large{
+  font-size: 1rem;
+}
+
+.fontSizeOptions {
+  display: flex;
+  gap: 10px;
+}
+
+.fontSizeOptions span {
+  cursor: pointer;
+  color: #333; /* Default color */
+  transition: color 0.3s ease;
+}
+
+.fontSizeOptions span:hover {
+  color: #3b82f6; /* Color when hovering */
+}
+
+/* Active font size option gets blue color */
+.fontSizeOptions span.active {
+  color: #3b82f6; /* Blue color for active font size */
+}
+>>>>>>> 911c895 (Initial Mask commit)

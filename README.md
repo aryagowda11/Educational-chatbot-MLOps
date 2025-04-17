@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI-Powered Chatbot for Enhancing Digital Learning
 ![picture alt](assets/logo.png)
 This project develops an AI-driven chatbot designed to transform video lectures into interactive learning experiences. By integrating cutting-edge speech-to-text and language processing technologies with robust MLOps practices, the chatbot provides real-time, context-aware support for students and professors. The system leverages best practices from other MLOps projects—such as modular code structure, containerized deployments, and continuous monitoring—to ensure scalability, reliability, and continuous improvement.
@@ -189,3 +190,7 @@ Special thanks to our Professor, [Ramin Mohammadi](https://github.com/raminmoham
 
 
 Feel free to explore the repository, provide feedback, and contribute to further enhancing the digital learning experience through this AI chatbot.
+=======
+# GRAID
+This repository contains the internal code for an AI-powered chatbot designed to enhance digital learning experiences. 
+>>>>>>> 911c895 (Initial Mask commit)

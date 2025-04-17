@@ -1,0 +1,7 @@
+# GRAID Irrelevant Question Prompt Template
+# 
+# This prompt is used for handling questions deemed irrelevant to video content.
+# It guides the LLM to respond appropriately to off-topic questions 
+# while gently redirecting users toward relevant content.
+#
+# Implementation details masked for security and intellectual property protection.

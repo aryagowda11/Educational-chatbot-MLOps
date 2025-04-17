@@ -1,9 +1,19 @@
 .container {
+<<<<<<< HEAD
   padding: 2rem;
   margin: 0 auto;
   height: calc(100vh - 70px);
   width: 55%;
   margin-top: 70px;
+=======
+  /* padding: 2rem; */
+  /* margin: 0 auto; */
+  height: calc(100vh - 90px);
+  /* width: 55%; */
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+>>>>>>> 911c895 (Initial Mask commit)
 }
 
 .header {
@@ -30,8 +40,53 @@
   background-color: #3a7bc8;
 }
 
+<<<<<<< HEAD
 .lectureGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
+=======
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex: 1;
+  overflow: scroll;
+  border: 2px solid #333;
+  border-radius: 15px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.lectureGrid {
+  display: block;
+  gap: 2rem;
+  overflow-y: auto;
+  flex: 1;
+  height: 100%;
+  border: 2px solid #333;
+  border-radius: 15px;
+  padding: 2rem;
+  z-index: 2;
+}
+
+/* Custom scrollbar styling */
+.lectureGrid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lectureGrid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.lectureGrid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.lectureGrid::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+>>>>>>> 911c895 (Initial Mask commit)
 }

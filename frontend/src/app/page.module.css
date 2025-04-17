@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+>>>>>>> 911c895 (Initial Mask commit)
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -13,7 +18,11 @@
   min-height: 100svh;
   padding: 80px;
   gap: 64px;
+<<<<<<< HEAD
   font-family: var(--font-geist-sans);
+=======
+  font-family: var(--font-inter);
+>>>>>>> 911c895 (Initial Mask commit)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,7 +44,11 @@
 }
 
 .main ol {
+<<<<<<< HEAD
   font-family: var(--font-geist-mono);
+=======
+  font-family: var(--font-inter);
+>>>>>>> 911c895 (Initial Mask commit)
   padding-left: 0;
   margin: 0;
   font-size: 14px;
@@ -49,7 +62,11 @@
 }
 
 .main code {
+<<<<<<< HEAD
   font-family: inherit;
+=======
+  font-family: var(--font-nunito), sans-serif;
+>>>>>>> 911c895 (Initial Mask commit)
   background: var(--gray-alpha-100);
   padding: 2px 4px;
   border-radius: 4px;
@@ -68,10 +85,14 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
+<<<<<<< HEAD
   transition:
     background 0.2s,
     color 0.2s,
     border-color 0.2s;
+=======
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+>>>>>>> 911c895 (Initial Mask commit)
   cursor: pointer;
   display: flex;
   align-items: center;

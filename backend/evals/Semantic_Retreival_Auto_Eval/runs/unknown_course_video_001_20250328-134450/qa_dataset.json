@@ -1,0 +1,18 @@
+{
+    "queries": {
+        "8a067524-9e94-4ba0-b006-1fe0f3314c77": "Explain the difference between regression and classification in terms of the dimensions of the output variable y. Provide an example to illustrate your explanation.",
+        "5a8d87e1-ece6-4dc0-8f14-2e71e185aa8c": "In a classification problem where you are predicting the breed of a dog, what does the term 'k dimensions' refer to, and why are these dimensions considered unique?"
+    },
+    "corpus": {
+        "f77c1ca5-eca4-45d1-880d-9ca7367617b7": "help us mapping x to y, right? And y used to be the real number, right? That's what we call the regression. And x basically had the dimension. When we want to talk about classification, the idea is that the main change that we have is that y is no longer a real number, and it has k dimensions okay a better way saying it why it belongs to y1 to yk now what are those k is that imagine you want to solve a problem uh create a model that predicts or classifies breeds of the breed of a dog you know and all the breeds that you have those are going to be this yk. Now, k, this k are unique, that means that, you know, if you look at your"
+    },
+    "relevant_docs": {
+        "8a067524-9e94-4ba0-b006-1fe0f3314c77": [
+            "f77c1ca5-eca4-45d1-880d-9ca7367617b7"
+        ],
+        "5a8d87e1-ece6-4dc0-8f14-2e71e185aa8c": [
+            "f77c1ca5-eca4-45d1-880d-9ca7367617b7"
+        ]
+    },
+    "mode": "text"
+}

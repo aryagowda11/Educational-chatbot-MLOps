@@ -1,0 +1,21 @@
+turn,user_id,course_id,video_id,session_id,timestamp,question,answer,retreived_semantic_chunks,retreived_temporal_chunks,intent_classified,datetime
+1,2,17,28829abe-5d28-49fa-9362-75adfe97f2fd,2_17_28829abe-5d28-49fa-9362-75adfe97f2fd,360-420,what assumptions exist in linear regression?,"Linear regression is based on several key assumptions, which are essential for ensuring the validity and reliability of the model. These assumptions include:
+
+1. **Linearity**: The relationship between the independent variables (features) and the dependent variable (target) should be linear. This means that the change in the dependent variable should be directly proportional to the change in the independent variables.
+
+2. **Independence**: Each observation should be independent of the others. This assumption is often violated in time series data or when observations are clustered.
+
+3. **Homoscedasticity**: The variance of the residuals (errors) should be constant across all levels of the independent variables. If the variance of the residuals increases or decreases as the level of the independent variable increases, this assumption is violated (heteroscedasticity).
+
+4. **Normality**: The residuals should be normally distributed. While linear regression can be robust to moderate deviations from normality, severe non-normality can affect the accuracy of the model.
+
+5. **No or Little Multicollinearity**: The independent variables should not be highly correlated with each other. High multicollinearity can lead to unstable estimates of the regression coefficients.
+
+6. **No Autocorrelation**: The residuals should not be autocorrelated, meaning that the errors at different observations should not be correlated with each other. This is particularly relevant in time series data.
+
+7. **Observations are Randomly Sampled**: The data should be a random sample from the population. If the data is not randomly sampled, the results may not be generalizable to the broader population.
+
+8. **No Significant Outliers**: The data should not contain significant outliers that could unduly influence the model. Outliers can affect the estimates of the regression coefficients and the overall fit of the model.
+
+These assumptions are crucial for the proper interpretation and application of linear regression models. Violations of these assumptions can lead to biased or inefficient estimates of the model parameters, and may necessitate the use of alternative models or transformations of the data.",,,chat,2025-04-06T19:33:27.015404+00:00
+2,2,17,28829abe-5d28-49fa-9362-75adfe97f2fd,2_17_28829abe-5d28-49fa-9362-75adfe97f2fd,360-420,thnk you,You're welcome. Is there something specific from the lecture on linear regression that you'd like help with or would you like to discuss one of the assumptions we covered?,,,general_chat,2025-04-06T19:34:07.490518+00:00

@@ -1,0 +1,72 @@
+/* .container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+  background-image: url("/assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
+  position: relative;
+} */
+
+.container {
+  position: relative; /* Required for pseudo-element positioning */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+/* Background image with opacity */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2; /* Adjust this value (0.3 = 30% opacity) */
+  z-index: 0;
+}
+
+.contentWrapper {
+  position: relative; /* Ensure content stays above background */
+  z-index: 1; /* Higher than pseudo-element's z-index */
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-right: 1px solid #333;
+  height: 100%;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+/* Keep other existing styles for courseGrid, etc. */

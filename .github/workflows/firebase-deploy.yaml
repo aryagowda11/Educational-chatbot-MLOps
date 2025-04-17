@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Deploy to Firebase Hosting
 on:
   push:
@@ -6,19 +7,40 @@ on:
       - "frontend/**"
   pull_request:
     branches: [main]
+=======
+name: Firebase Deploy
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - "frontend/**"
+  pull_request:
+    branches: [dev]
+>>>>>>> 911c895 (Initial Mask commit)
     paths:
       - "frontend/**"
 
 jobs:
+<<<<<<< HEAD
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+=======
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+>>>>>>> 911c895 (Initial Mask commit)
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
+<<<<<<< HEAD
           cache: "npm"
           cache-dependency-path: frontend/package-lock.json
 
@@ -60,3 +82,30 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           channelId: live
           projectId: "${{ secrets.FIREBASE_PROJECT_ID }}"
+=======
+
+      # Install dependencies in the frontend directory
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: yarn install --frozen-lockfile
+
+      # Build the frontend
+      - name: Build frontend
+        working-directory: ./frontend
+        run: yarn build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.ENDPOINT }}/
+          NEXT_PUBLIC_WEBSOCKET_API_URL: ${{ secrets.NEXT_PUBLIC_WEBSOCKET_API_URL }}
+          NODE_ENV: production
+
+      # Install Firebase CLI globally
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      # Deploy to Firebase
+      - name: Deploy to Firebase
+        working-directory: ./frontend
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+>>>>>>> 911c895 (Initial Mask commit)

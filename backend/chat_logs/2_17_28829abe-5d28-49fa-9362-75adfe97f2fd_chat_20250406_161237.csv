@@ -1,0 +1,2 @@
+turn,user_id,course_id,video_id,session_id,timestamp,question,answer,retreived_semantic_chunks,retreived_temporal_chunks,intent_classified,datetime
+1,2,17,28829abe-5d28-49fa-9362-75adfe97f2fd,2_17_28829abe-5d28-49fa-9362-75adfe97f2fd,360-420,Hello,"Hello. It's nice to connect with you. Is there something specific you'd like to discuss about the lecture, or is everything going well so far?",,,general_chat,2025-04-06T20:12:18.633445+00:00
