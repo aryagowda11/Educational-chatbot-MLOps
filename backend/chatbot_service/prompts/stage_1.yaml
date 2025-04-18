@@ -1,0 +1,7 @@
+# GRAID Stage 1 Prompt Template
+# 
+# This prompt is used for the first stage of the multi-stage QA pipeline.
+# It guides the LLM in initial processing of user questions with retrieved context
+# to prepare for more refined answer generation in stage 2.
+#
+# Implementation details masked for security and intellectual property protection.

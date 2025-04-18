@@ -1,0 +1,4 @@
+index,video_description,user_question,true_intent,predicted_intent
+40,"This lecture explains Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM), and Gated Recurrent Units (GRU) architectures for sequence modeling.",How do transformer architectures compare to LSTMs for handling long sequences?,chat,irrelevant
+69,"This lecture explores graph neural networks (GNNs), covering message passing, node/edge embeddings, and applications in molecular property prediction and social network analysis.",I need to leave early today lets finish this tomorrow?,general_chat,irrelevant
+26,"This workshop demonstrates how to build and train a transformer-based language model from scratch, covering attention mechanisms, positional encoding, and training techniques.",What's your opinion on the ethical implications of large language models?,chat,irrelevant

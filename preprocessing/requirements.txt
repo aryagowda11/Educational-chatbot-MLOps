@@ -12,3 +12,8 @@ python-dotenv
 pydub==0.25.1
 pinecone-client>=3.0.0
 openai
+<<<<<<< HEAD
+=======
+asyncio>=3.4.3
+requests>=2.31.0
+>>>>>>> 911c895 (Initial Mask commit)

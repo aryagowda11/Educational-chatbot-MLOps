@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from src.llms_initialize import *
 from src.processing_chunks import *
 from llama_index.core.retrievers import VectorIndexRetriever
@@ -118,3 +119,86 @@ if __name__ == "__main__":
     except Exception as e:
         logger.critical("Fatal error in main script", exc_info=True)
         raise
+=======
+import functions_framework
+from google.cloud import storage
+from dotenv import load_dotenv
+import os 
+import shutil
+from src.processing_chunks import *
+from src.file import get_local_video_path,create_files_in_bucket_from_df,create_directory_structure,extract_course_video_info_from_path
+from src.logger_config import get_logger
+from src.vector_db import create_vector_index
+from src.llms_initialize import setup_environment
+from src.description_processor import LLMChat
+from src.API_Calling import update_video_processing_status
+from pathlib import Path
+
+"""
+Main module for the GRAID preprocessing pipeline.
+This module defines the cloud function entry point for the video processing system,
+orchestrating the complete workflow from video upload detection to indexed, 
+searchable content ready for the chatbot service.
+
+Implementation details are masked for security and intellectual property protection.
+"""
+
+# Load .env file
+load_dotenv()
+
+# Configure logging
+logger = get_logger()
+
+valid_file_extensions = ['mp4']
+
+# Triggered by a change in a storage bucket
+@functions_framework.cloud_event
+def process_event(cloud_event) -> None:
+    """
+    Cloud function entry point triggered by a storage event.
+    
+    This function orchestrates the entire video processing pipeline:
+    1. Validates file format and extracts course and video IDs
+    2. Downloads the video from cloud storage
+    3. Creates the local directory structure for processing
+    4. Initializes embedding and language models
+    5. Processes the video into transcription and structured data
+    6. Creates vector indices for semantic search
+    7. Generates a comprehensive video description
+    8. Updates the video processing status in the database
+    9. Cleans up temporary files
+    
+    Args:
+        cloud_event: The cloud event object containing storage event data
+        
+    Returns:
+        tuple: (message, status_code) indicating success or failure
+        
+    Implementation details masked for security and intellectual property protection.
+    """
+    # Implementation masked for security
+    pass
+    
+
+def get_video_description(llm, vector_df):
+    """
+    Generates a structured description of the video using an LLM.
+    
+    This function:
+    1. Concatenates all corrected text segments from the video
+    2. Loads the specialized description generation prompt
+    3. Uses the LLM to generate a comprehensive video description
+    4. Logs the generated description
+    
+    Args:
+        llm: The language model to use for description generation
+        vector_df: DataFrame containing processed video text segments
+        
+    Returns:
+        str: The generated video description
+        
+    Implementation details masked for security and intellectual property protection.
+    """
+    # Implementation masked for security
+    pass
+>>>>>>> 911c895 (Initial Mask commit)

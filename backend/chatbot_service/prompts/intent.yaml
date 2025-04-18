@@ -1,0 +1,7 @@
+# GRAID Intent Classification Prompt Template
+# 
+# This prompt is used for determining the intent of user queries.
+# It guides the LLM to classify incoming questions as retrieval, chat,
+# general chat, or irrelevant to route them appropriately.
+#
+# Implementation details masked for security and intellectual property protection.

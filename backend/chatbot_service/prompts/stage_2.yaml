@@ -1,0 +1,7 @@
+# GRAID Stage 2 Prompt Template
+# 
+# This prompt is used for the second stage of the multi-stage QA pipeline.
+# It guides the LLM to generate final, refined answers based on 
+# the output from stage 1 processing.
+#
+# Implementation details masked for security and intellectual property protection.

@@ -1,0 +1,26 @@
+name: Backup Main Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensures all history is fetched
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Push to backup branch
+        run: |
+          git checkout -B backup
+          git push origin backup --force

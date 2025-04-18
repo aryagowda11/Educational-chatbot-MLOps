@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 
 import React, { useRef, useEffect, useCallback } from "react";
 import videojs from "video.js";
@@ -66,5 +67,74 @@ function VideoPlayer(props) {
     </div>
   );
 }
+=======
+import React, { useRef, useEffect, useState } from "react";
+import ReactPlayer from "react-player";
+import screenfull from "screenfull";
+import styles from "../StudentCourseContainer/index.module.css";
+
+const VideoPlayer = ({ src, playerRef, onToggleChat, showChat, chatProps }) => {
+  const localRef = useRef(null);
+  const containerRef = useRef(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    if (playerRef) {
+      playerRef.current = {
+        getCurrentTime: () => localRef.current?.getCurrentTime() || 0,
+      };
+    }
+
+    const handleFullscreenChange = () => {
+      const fullscreenEl = document.fullscreenElement;
+      setIsFullscreen(fullscreenEl === containerRef.current);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (screenfull.isEnabled) {
+      screenfull.toggle(containerRef.current);
+    }
+  }
+
+  return (
+    <div ref={containerRef} className={styles.reactVideoPlayer}>
+      <ReactPlayer
+        ref={localRef}
+        controls={true}
+        url={src}
+        width="100%"
+        height="100%"
+        style={{ position: "absolute", top: 0, left: 0, borderRadius: "15px" }}
+      />
+      <button onClick={toggleFullscreen} className={styles.fullscreenButton}>
+        {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+      </button>
+      {isFullscreen && (
+        <>
+          <button onClick={onToggleChat} className={styles.chatToggleButton}>
+            💬 {showChat ? "Hide Chat" : "Show Chat"}
+          </button>
+          {showChat && (
+            <div className={styles.chatOverlay}>
+              <chatProps.ChatComponent
+                courseId={chatProps.courseId}
+                getCurrentTime={chatProps.getCurrentTime}
+                videoId={chatProps.videoId}
+                lectureData={chatProps.lectureData}
+              />
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+>>>>>>> 911c895 (Initial Mask commit)
 
 export default VideoPlayer;

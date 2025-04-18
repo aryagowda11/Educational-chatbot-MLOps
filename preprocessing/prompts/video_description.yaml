@@ -1,0 +1,15 @@
+# GRAID Video Description Prompt Template
+# 
+# This prompt is used for generating structured descriptions and summaries
+# from video lecture transcripts. It guides the LLM to extract key concepts,
+# organize information logically, and produce academic-quality content
+# suitable for educational purposes.
+#
+# The prompt includes detailed instructions for:
+# - Content extraction from lecture transcripts
+# - Multi-pass analysis for concept identification
+# - Structure and organization of summaries
+# - Domain-specific adaptations for different academic subjects
+# - Output formatting and quality standards
+#
+# Implementation details masked for security and intellectual property protection.

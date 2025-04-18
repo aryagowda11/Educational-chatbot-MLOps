@@ -1,0 +1,7 @@
+# GRAID Chat Prompt Template
+# 
+# This prompt is used for handling chat-type interactions.
+# It guides the LLM to respond to conversational queries that require contextual awareness
+# but may not necessarily need direct retrieval from video content.
+#
+# Implementation details masked for security and intellectual property protection.

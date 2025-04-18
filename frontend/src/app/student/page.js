@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 import styles from "./StudentPage.module.css";
@@ -31,5 +32,15 @@ export default function StudentPage() {
         </main>
       </div>
     </div>
+=======
+import CoursePageContainer from "@/app/_components/CoursePageContainer";
+import ProtectedRoute from "@/app/_components/ProtectedRoute";
+
+export default function StudentPage() {
+  return (
+    <ProtectedRoute>
+      <CoursePageContainer />
+    </ProtectedRoute>
+>>>>>>> 911c895 (Initial Mask commit)
   );
 }

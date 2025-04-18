@@ -1,0 +1,36 @@
+{
+  "timestamp": "20250407-100748",
+  "sample_size": 10,
+  "accuracy": 0.7,
+  "class_metrics": {
+    "retrieval": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 5
+    },
+    "chat": {
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "support": 3
+    },
+    "general_chat": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "irrelevant": {
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "support": 1
+    }
+  },
+  "macro_avg": {
+    "precision": 0.5625,
+    "recall": 0.5833333333333333,
+    "f1": 0.475
+  }
+}

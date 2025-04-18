@@ -1,0 +1,131 @@
+.container {
+  background-color: transparent;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  min-width: 300px;
+  height: fit-content;
+  color: white;
+  flex:2
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Override MUI styles for better integration with your theme */
+.container :global(.MuiDataGrid-root) {
+  border: none !important;
+  font-family: inherit !important;
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.container :global(.MuiDataGrid-main),
+.container :global(.MuiDataGrid-virtualScroller),
+.container :global(.MuiDataGrid-virtualScrollerContent),
+.container :global(.MuiDataGrid-virtualScrollerRenderZone) {
+  background-color: transparent !important;
+}
+
+.container :global(.MuiDataGrid-columnHeaders),
+.container :global(.MuiDataGrid-columnHeader),
+.container :global(.MuiDataGrid-columnHeadersInner),
+.container :global(.MuiDataGrid-columnHeader--sorted),
+.container :global(.MuiDataGrid-columnHeaderTitleContainer),
+.container :global(.css-1jbbcbn-MuiDataGrid-columnHeaderTitle),
+.container :global([class*="MuiDataGrid-columnHeader"]) {
+  background-color: transparent !important;
+  border-bottom: none !important;
+  color: white !important;
+}
+
+.container :global(.MuiDataGrid-columnHeader:hover),
+.container :global(.MuiDataGrid-columnHeader:focus),
+.container :global(.MuiDataGrid-columnHeader:focus-within),
+.container :global(.MuiDataGrid-columnHeader--sorted),
+.container :global(.MuiDataGrid-columnHeader--sorted:hover),
+.container :global([class*="MuiDataGrid-columnHeader"]:hover) {
+  background-color: transparent !important;
+  outline: none;
+}
+
+.container :global(.MuiDataGrid-columnSeparator) {
+  visibility: hidden;
+}
+
+/* Search field styling */
+.container :global(.MuiOutlinedInput-root) {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.container :global(.MuiOutlinedInput-root:hover) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.container :global(.MuiOutlinedInput-root.Mui-focused) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.container
+  :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.container
+  :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.container :global(.MuiInputAdornment-root .MuiSvgIcon-root) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* DataGrid additional styling */
+.container :global(.MuiDataGrid-row) {
+  background-color: transparent;
+  color: white;
+}
+
+.container :global(.MuiDataGrid-row:hover) {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.container :global(.MuiDataGrid-cell:focus),
+.container :global(.MuiDataGrid-cell:focus-within) {
+  outline: none;
+}
+
+.container :global(.MuiTablePagination-root),
+.container :global(.MuiTablePagination-selectLabel),
+.container :global(.MuiTablePagination-displayedRows),
+.container :global(.MuiSelect-select),
+.container :global(.MuiSelect-icon) {
+  color: white;
+  background-color: transparent;
+}
+
+.container :global(.MuiDataGrid-overlay) {
+  background-color: transparent;
+}
+
+.container
+  :global(.css-1n5ivm6)
+  :global(.MuiDataGrid-container--top [role="row"]),
+.container
+  :global(.css-1n5ivm6)
+  :global(.MuiDataGrid-container--bottom [role="row"]) {
+  background: transparent !important;
+}

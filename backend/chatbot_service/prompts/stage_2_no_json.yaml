@@ -1,0 +1,7 @@
+# GRAID Stage 2 (No JSON) Prompt Template
+# 
+# This prompt is used for the second stage of the multi-stage QA pipeline
+# without requiring JSON-formatted output. It guides the LLM to generate
+# natural language answers based on the output from stage 1 processing.
+#
+# Implementation details masked for security and intellectual property protection.

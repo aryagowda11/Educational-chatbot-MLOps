@@ -1,0 +1,118 @@
+name: Preprocessing
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - "preprocessing/**"
+  pull_request:
+    branches: [dev]
+    paths:
+      - "preprocessing/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install Poetry
+        working-directory: ./preprocessing
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies with Poetry
+        working-directory: ./preprocessing
+        run: |
+          poetry install --no-root
+
+      - name: Set up environment variables
+        run: |
+          echo "PINECONE_API_KEY=${{ secrets.PINECONE_API_KEY }}" >> $GITHUB_ENV
+          echo "PINECONE_ENVIRONMENT=${{ secrets.PINECONE_ENVIRONMENT }}" >> $GITHUB_ENV
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
+          echo "GROQ_API_KEY_1=${{ secrets.GROQ_API_KEY_1 }}" >> $GITHUB_ENV
+          echo "GROQ_API_KEY_2=${{ secrets.GROQ_API_KEY_2 }}" >> $GITHUB_ENV
+          echo "GROQ_API_KEY_3=${{ secrets.GROQ_API_KEY_3 }}" >> $GITHUB_ENV
+          echo "BUCKET_NAME=${{ secrets.BUCKET_NAME }}" >> $GITHUB_ENV
+          echo "ENDPOINT=${{ secrets.ENDPOINT }}" >> $GITHUB_ENV
+
+      - name: Run vector_db unit tests
+        working-directory: ./preprocessing
+        run: |
+          poetry run python -m unittest tests.unit_test
+
+      - name: Report test results
+        if: always()
+        run: |
+          echo "Test run completed"
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Deploy Cloud Function
+        working-directory: ./preprocessing
+        run: |
+          gcloud functions deploy process-video-1 \
+              --gen2 \
+              --runtime python39 \
+              --trigger-bucket graid-course \
+              --region us-east4 \
+              --memory 8192MB \
+              --timeout 540s \
+              --set-env-vars GROQ_API_KEY_1=${{ secrets.GROQ_API_KEY_1 }},GROQ_API_KEY_2=${{ secrets.GROQ_API_KEY_2 }},GROQ_API_KEY_3=${{ secrets.GROQ_API_KEY_3 }},PINECONE_API_KEY=${{ secrets.PINECONE_API_KEY }},OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }},PINECONE_ENVIRONMENT=${{ secrets.PINECONE_ENVIRONMENT }},BUCKET_NAME=${{ secrets.BUCKET_NAME }},ENDPOINT=${{ secrets.ENDPOINT }} \
+              --entry-point process_event \
+              --min-instances 0 \
+              --max-instances 1
+
+      - name: Verify Deployment
+        run: |
+          FUNCTION_STATUS=$(gcloud functions describe process-video-1 --gen2 --region us-east4 --format="value(state)")
+          if [ "$FUNCTION_STATUS" != "ACTIVE" ]; then
+            echo "Function deployment is not active. Current status: $FUNCTION_STATUS"
+            exit 1
+          fi
+          echo "Function deployed successfully and is active"
+
+      - name: Update Deployment Status
+        if: always()
+        run: |
+          if [ ${{ job.status }} == "success" ]; then
+            echo "Deployment completed successfully at $(date)"
+            echo "DEPLOYMENT_STATUS=success" >> $GITHUB_ENV
+          else
+            echo "Deployment failed at $(date)"
+            echo "DEPLOYMENT_STATUS=failure" >> $GITHUB_ENV
+          fi
+
+      # - name: Send Notification
+      #   if: always()
+      #   uses: slackapi/slack-github-action@v1
+      #   with:
+      #     payload: |
+      #       {
+      #         "text": "Preprocessing Function Deployment: ${{ env.DEPLOYMENT_STATUS }}\nRepo: ${{ github.repository }}\nBranch: ${{ github.ref_name }}\nTriggered by: ${{ github.actor }}"
+      #       }
+      #   env:
+      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

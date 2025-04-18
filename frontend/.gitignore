@@ -39,4 +39,8 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+<<<<<<< HEAD
 next-env.d.ts
+=======
+next-env.d.ts
+>>>>>>> 911c895 (Initial Mask commit)

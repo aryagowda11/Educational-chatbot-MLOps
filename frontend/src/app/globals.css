@@ -60,3 +60,21 @@ a {
 .animate-spin-slower {
   animation: spin-slower 25s linear infinite;
 }
+<<<<<<< HEAD
+=======
+
+.katex-block {
+  font-size: inherit;
+  font-weight: normal;
+  display: block;
+  max-width: 100%;
+
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  overflow-x: auto; /* fallback for very long equations */
+  padding: 0.5rem 0;
+}
+>>>>>>> 911c895 (Initial Mask commit)

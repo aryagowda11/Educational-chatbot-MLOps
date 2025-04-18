@@ -1,0 +1,65 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - "backend/**"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      # 1. Check out the latest code
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+      
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      # 3. Configure Docker to use gcloud for authentication to Artifact Registry
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker us-east4-docker.pkg.dev
+
+      # 4. Build and push the Docker image to the backend-artifacts repository in us-east4
+      - name: Build and Push Docker image
+        run: |
+          IMAGE_NAME="us-east4-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/backend-artifacts/my-app"
+          GIT_SHA="${{ github.sha }}"
+          SHORT_SHA="${GIT_SHA:0:7}"
+
+          docker build \
+            -f backend/Dockerfile \
+            -t "$IMAGE_NAME:$SHORT_SHA" \
+            -t "$IMAGE_NAME:latest" \
+            .
+
+          docker push "$IMAGE_NAME:$SHORT_SHA"
+          docker push "$IMAGE_NAME:latest"
+
+      # 5. Deploy to Cloud Run in us-east4 using the commit SHA tag
+      - name: Deploy to Cloud Run
+        run: |
+          IMAGE_NAME="us-east4-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/backend-artifacts/my-app"
+          GIT_SHA="${{ github.sha }}"
+          SHORT_SHA="${GIT_SHA:0:7}"
+
+          gcloud run deploy my-service \
+            --image "$IMAGE_NAME:$SHORT_SHA" \
+            --region us-east4 \
+            --platform managed \
+            --allow-unauthenticated \
+            --timeout=600
